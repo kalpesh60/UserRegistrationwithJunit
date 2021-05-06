@@ -59,4 +59,18 @@ public class UserRegistrationTest {
         boolean result = userRegistration.phoneNoValidation("875456666");
         Assertions.assertFalse(result);
     }
+
+    @Test
+    void givenPassword_WhenValid_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.passwordValidation("Asdf@12344");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    void givenPassword_WhenNotValid_ShouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.passwordValidation("adgggghh");
+        Assertions.assertFalse(result);
+    }
 }
