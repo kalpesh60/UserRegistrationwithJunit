@@ -15,6 +15,20 @@ public class UserRegistrationTest {
     void givenFirstName_WhenNotValid_ShouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.firstNameValidation("ka");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    void givenLastName_WhenValid_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.lastNameValidation("Dale");
         Assertions.assertTrue(result);
+    }
+
+    @Test
+    void givenLastName_WhenNotValid_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.lastNameValidation("dh");
+        Assertions.assertFalse(result);
     }
 }
