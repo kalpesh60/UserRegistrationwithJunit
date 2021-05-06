@@ -45,4 +45,18 @@ public class UserRegistrationTest {
         boolean result = userRegistration.emailValidation("kalp.@@com");
         Assertions.assertFalse(result);
     }
+
+    @Test
+    void givenPhoneNo_WhenValid_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.phoneNoValidation("91 8892829299");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    void givenPhoneNo_WhenNotValid_ShouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.phoneNoValidation("875456666");
+        Assertions.assertFalse(result);
+    }
 }
