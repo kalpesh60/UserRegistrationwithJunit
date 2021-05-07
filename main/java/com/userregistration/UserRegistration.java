@@ -24,7 +24,7 @@ public class UserRegistration {
     }
 
     public boolean phoneNoValidation(String phonenumber) {
-        Pattern pattern = Pattern.compile(emailPattern);
+        Pattern pattern = Pattern.compile(phoneNoPattern);
         return pattern.matcher(phonenumber).matches();
     }
 

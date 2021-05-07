@@ -33,42 +33,42 @@ public class UserRegistrationTest {
     }
 
     @Test
-    void givenEmail_WhenValid_ShouldReturnTrue() {
+    public void givenEmail_WhenValid_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.emailValidation("kalp.gh@mail.com");
         Assert.assertTrue(result);
     }
 
     @Test
-    void givenEmail_WhenNotValid_ShouldReturnFalse() {
+    public void givenEmail_WhenNotValid_ShouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.emailValidation("kalp.@@com");
         Assert.assertFalse(result);
     }
 
     @Test
-    void givenPhoneNo_WhenValid_ShouldReturnTrue() {
+    public void givenPhoneNo_WhenValid_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.phoneNoValidation("91 8892829299");
+        boolean result = userRegistration.phoneNoValidation("97 8989898989");
         Assert.assertTrue(result);
     }
 
     @Test
-    void givenPhoneNo_WhenNotValid_ShouldReturnFalse() {
+    public void givenPhoneNo_WhenNotValid_ShouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.phoneNoValidation("875456666");
         Assert.assertFalse(result);
     }
 
     @Test
-    void givenPassword_WhenValid_ShouldReturnTrue() {
+    public void givenPassword_WhenValid_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.passwordValidation("Asdf@12344");
         Assert.assertTrue(result);
     }
 
     @Test
-    void givenPassword_WhenNotValid_ShouldReturnFalse() {
+    public void givenPassword_WhenNotValid_ShouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.passwordValidation("dddddd");
         Assert.assertFalse(result);
